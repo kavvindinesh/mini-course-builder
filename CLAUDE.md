@@ -8,12 +8,12 @@
 
 ## Project Structure
 
-The project is nearly empty for now. Keep everything at the top level until there is a reason to split it up:
+A mini-course on inspecting aircraft composite structures, built once from a 6-slide deck (the deck itself is not stored in the repo). Everything lives at the top level:
 
 - `CLAUDE.md`: this file, instructions for Claude.
-- `index.html`: the main page (to be added).
-- `styles.css`: shared styles (to be added).
-- `script.js`: shared JavaScript (to be added).
+- `index.html`: the whole course, one `<section class="lesson">` per slide plus a wrap-up.
+- `styles.css`: all styles. Colours are CSS variables, with dark values under `[data-theme="dark"]`.
+- `script.js`: theme toggle, switching between sections, progress bar, and quizzes.
 
 Update this section when new files or folders are added.
 
@@ -26,14 +26,14 @@ Update this section when new files or folders are added.
 
 ### Site structure
 
-One long scrolling page (`index.html`), in this order:
+One page (`index.html`) that shows one section at a time, in this order:
 
 1. **Header**: course title and the light/dark theme button.
 2. **Intro**: what the course covers and 3–4 learning goals.
-3. **Lessons**: one section per slide (3–5 in total). Each has an explanation, an example, key takeaways, and a short quiz.
+3. **Lessons**: one section per slide. Each has an explanation, an example, key takeaways, and a short quiz.
 4. **Wrap-up**: a short summary of the course.
 
-How students move through it: they scroll from top to bottom. There is no lesson menu. A thin progress bar at the top of the screen shows how far they've got. After each lesson there is a quiz with 2–3 multiple-choice questions and instant feedback. Nothing is saved or sent anywhere.
+How students move through it: Previous and Next buttons switch sections with JavaScript (no separate pages), and the address ends in `#lesson-N` so a reload keeps their place. There is no lesson menu. A thin progress bar at the top shows how many sections they've reached. Without JavaScript, all sections show on one long page. After each lesson there is a quiz with 2–3 multiple-choice questions and instant feedback. Nothing is saved or sent anywhere.
 
 ### Phases
 

@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inspecting Composite Structures</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><div class="progress-bar" id="progress-bar"></div></div>
+
+  <header class="site-header">
+    <h1>Inspecting Composite Structures</h1>
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">Dark theme</button>
+  </header>
+
+  <main id="course">
+
+    <!-- Slide 1 -->
+    <section class="lesson" id="lesson-1" aria-labelledby="lesson-1-title">
+      <p class="lesson-step">Section 1 of 7</p>
+      <h2 id="lesson-1-title" tabindex="-1">Learning outcomes</h2>
+      <p>
+        This short course looks at why composite parts of an aircraft are harder to inspect
+        than metal ones, what kinds of damage they suffer, and how that damage is found.
+        It uses the aircraft radome as a worked example.
+      </p>
+      <p>By the end, you should be able to:</p>
+      <ul>
+        <li>Explain the main challenge of inspecting composite structures compared with metal structures.</li>
+        <li>
+          Tell apart five common types of composite damage (erosion, impact, moisture intrusion,
+          lightning strike and delamination) and the inspection methods used for each.
+        </li>
+        <li>Explain the reasoning behind the instructions given for taking airframe components apart and putting them back together.</li>
+      </ul>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="lesson" id="lesson-2" aria-labelledby="lesson-2-title">
+      <p class="lesson-step">Section 2 of 7</p>
+      <h2 id="lesson-2-title" tabindex="-1">Challenges of composite inspection</h2>
+      <p>
+        Metal and composite structures fail in very different ways, and that changes how you
+        inspect them. When metal is damaged, it usually shows. Corrosion leaves visible marks
+        on the surface, and cracks can often be seen with the naked eye.
+      </p>
+      <p>
+        Composite damage is much more likely to stay hidden. Many composite parts are built as a
+        "sandwich": two thin outer skins bonded to a lighter core in between. A defect can sit
+        inside the core, or on the far skin, with nothing showing on the surface you are
+        looking at.
+      </p>
+      <div class="example">
+        <h3>In practice</h3>
+        <p>
+          A clean, undamaged-looking outer surface on a composite part does not prove the part is
+          sound. A visual check is only the start, and other inspection methods are needed to find
+          damage below the surface.
+        </p>
+      </div>
+      <h3>Key takeaways</h3>
+      <ul>
+        <li>Damage in metal usually leaves visible signs on the outside.</li>
+        <li>Damage in composites can stay concealed inside the structure.</li>
+      </ul>
+
+      <div class="quiz">
+        <h3>Quick check</h3>
+        <fieldset class="question" data-correct="b">
+          <legend>Why are composite structures harder to inspect than metal ones?</legend>
+          <button type="button" data-option="a">Composites corrode much faster than metal.</button>
+          <button type="button" data-option="b">Composite damage can stay hidden with few external signs.</button>
+          <button type="button" data-option="c">Composites cannot be inspected visually at all.</button>
+          <p class="feedback" aria-live="polite"></p>
+          <p class="explanation" hidden>Unlike metal, composite damage often remains concealed inside the structure.</p>
+          <button type="button" class="retry" hidden>Try again</button>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- Slide 3 -->
+    <section class="lesson" id="lesson-3" aria-labelledby="lesson-3-title">
+      <p class="lesson-step">Section 3 of 7</p>
+      <h2 id="lesson-3-title" tabindex="-1">What damages composites</h2>
+      <p>Composite structures on an aircraft are typically damaged in three ways:</p>
+      <ul>
+        <li><strong>Erosion</strong> from rain or hailstones wearing away the surface.</li>
+        <li><strong>Lightning strikes</strong> or static discharges.</li>
+        <li>
+          <strong>Impact</strong> from bird strikes, from foreign object damage (FOD) such as debris
+          thrown up from the runway, or from accidents with ground vehicles.
+        </li>
+      </ul>
+      <p>
+        The trouble is that the visible signs can be small. Serious damage may show up only as
+        cracks, crazing (a network of fine surface cracks), stains or scuffs in the paintwork.
+        Any of these should lead to a closer examination for defects below the surface.
+      </p>
+      <p>
+        An impact can also travel. The shock can be passed on through the structure to the
+        points where the part is attached, so those attachment points and the parts next to them
+        should be checked for secondary damage too.
+      </p>
+      <div class="example">
+        <h3>In practice</h3>
+        <p>
+          A scuff on the paint after a bird strike is not just cosmetic. Treat it as a reason to
+          look beneath the surface, and to check the attachment points as well.
+        </p>
+      </div>
+      <h3>Key takeaways</h3>
+      <ul>
+        <li>The main causes of damage are erosion, lightning or static discharge, and impact.</li>
+        <li>Small marks in the paint can hide larger defects beneath the surface.</li>
+        <li>Check attachment points for secondary damage passed on by the impact.</li>
+      </ul>
+
+      <div class="quiz">
+        <h3>Quick check</h3>
+        <fieldset class="question" data-correct="c">
+          <legend>You find light scuffs in the paint of a composite panel after a bird strike. What should you do?</legend>
+          <button type="button" data-option="a">Nothing, as paint scuffs are cosmetic.</button>
+          <button type="button" data-option="b">Repaint the area and return it to service.</button>
+          <button type="button" data-option="c">Examine it further for defects below the surface.</button>
+          <p class="feedback" aria-live="polite"></p>
+          <p class="explanation" hidden>Visible marks may be the only sign of sub-surface damage, so further examination is required.</p>
+          <button type="button" class="retry" hidden>Try again</button>
+        </fieldset>
+        <fieldset class="question" data-correct="a">
+          <legend>Besides the impact area itself, where else should you look for damage?</legend>
+          <button type="button" data-option="a">At the attachment points and the parts next to them.</button>
+          <button type="button" data-option="b">Only on the opposite side of the aircraft.</button>
+          <button type="button" data-option="c">Nowhere else, as impact damage stays local.</button>
+          <p class="feedback" aria-live="polite"></p>
+          <p class="explanation" hidden>The shock can be passed on to attachment points, causing secondary damage there.</p>
+          <button type="button" class="retry" hidden>Try again</button>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- Slide 4 -->
+    <section class="lesson" id="lesson-4" aria-labelledby="lesson-4-title">
+      <p class="lesson-step">Section 4 of 7</p>
+      <h2 id="lesson-4-title" tabindex="-1">Moisture and the freeze-thaw effect</h2>
+      <p>
+        Any break in the surface of a composite laminate (layers of material bonded together) or
+        its honeycomb core gives moisture a way in. Once water is inside, it keeps causing damage
+        during normal flight operations.
+      </p>
+      <p>This happens through a repeating freeze-thaw cycle:</p>
+      <ol>
+        <li>Water gets trapped in a crack.</li>
+        <li>At altitude the water freezes. Water expands by about 9% when it freezes, which pushes on the crack and can open it further.</li>
+        <li>Back on the ground the ice melts, and the water seeps deeper into the now larger crack.</li>
+      </ol>
+      <p>
+        Each flight repeats the cycle, so the bonded structure is gradually destroyed from the
+        inside.
+      </p>
+      <div class="example">
+        <h3>In practice</h3>
+        <p>
+          If you suspect moisture has got in through a puncture in the skin, investigate how far
+          the moisture has spread through the structure, not just the puncture itself.
+        </p>
+      </div>
+      <h3>Key takeaways</h3>
+      <ul>
+        <li>Any surface damage can let moisture into the structure.</li>
+        <li>Repeated freezing and thawing makes cracks grow with each flight.</li>
+        <li>When moisture is suspected, check how far it has been absorbed.</li>
+      </ul>
+
+      <div class="quiz">
+        <h3>Quick check</h3>
+        <fieldset class="question" data-correct="b">
+          <legend>Why does trapped water make a crack worse?</legend>
+          <button type="button" data-option="a">Water dissolves the resin in the laminate.</button>
+          <button type="button" data-option="b">It expands about 9% when it freezes, forcing the crack open.</button>
+          <button type="button" data-option="c">It makes the part too heavy to fly.</button>
+          <p class="feedback" aria-live="polite"></p>
+          <p class="explanation" hidden>Freezing water expands, stressing the crack; when it melts it penetrates further.</p>
+          <button type="button" class="retry" hidden>Try again</button>
+        </fieldset>
+        <fieldset class="question" data-correct="c">
+          <legend>Moisture may have entered through a skin puncture. What should the investigation check?</legend>
+          <button type="button" data-option="a">Only the size of the puncture.</button>
+          <button type="button" data-option="b">Only the colour of the paint around it.</button>
+          <button type="button" data-option="c">How far the moisture has been absorbed into the structure.</button>
+          <p class="feedback" aria-live="polite"></p>
+          <p class="explanation" hidden>The investigation should establish the extent of moisture absorption.</p>
+          <button type="button" class="retry" hidden>Try again</button>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- Slide 5 -->
+    <section class="lesson" id="lesson-5" aria-labelledby="lesson-5-title">
+      <p class="lesson-step">Section 5 of 7</p>
+      <h2 id="lesson-5-title" tabindex="-1">Radome damage</h2>
+      <p>
+        The radome is the composite nose cone that covers an aircraft's radar. Because it faces
+        forward into the weather, it takes a lot of punishment. A transport aircraft's radome
+        lasts about three years on average.
+      </p>
+      <p>The common types of radome damage are:</p>
+      <ul>
+        <li><strong>Lightning strikes</strong></li>
+        <li><strong>Erosion</strong></li>
+        <li><strong>Impact</strong> from bird strikes</li>
+        <li><strong>Delamination</strong>: the internal layers separating from each other</li>
+        <li><strong>Water ingression</strong>: water collecting between the layers</li>
+      </ul>
+      <div class="example">
+        <h3>In practice</h3>
+        <p>
+          The cost adds up. A large airline can spend $100,000 to $250,000 a year repairing
+          radomes, and most of that is due to lightning strikes and other thunderstorm damage.
+        </p>
+      </div>
+      <h3>Key takeaways</h3>
+      <ul>
+        <li>A transport aircraft radome lasts about three years on average.</li>
+        <li>Its common damage types are lightning, erosion, bird strike, delamination and water ingression.</li>
+        <li>Lightning and thunderstorms cause most radome repairs.</li>
+      </ul>
+
+      <div class="quiz">
+        <h3>Quick check</h3>
+        <fieldset class="question" data-correct="a">
+          <legend>What is delamination?</legend>
+          <button type="button" data-option="a">The internal layers of the composite separating.</button>
+          <button type="button" data-option="b">Water collecting between the layers.</button>
+          <button type="button" data-option="c">The surface being worn away by rain.</button>
+          <p class="feedback" aria-live="polite"></p>
+          <p class="explanation" hidden>Delamination is separation of internal layers; water between layers is water ingression.</p>
+          <button type="button" class="retry" hidden>Try again</button>
+        </fieldset>
+        <fieldset class="question" data-correct="c">
+          <legend>What causes most radome repairs at a large airline?</legend>
+          <button type="button" data-option="a">Bird strikes</button>
+          <button type="button" data-option="b">Rain erosion</button>
+          <button type="button" data-option="c">Lightning strikes and thunderstorm activity</button>
+          <p class="feedback" aria-live="polite"></p>
+          <p class="explanation" hidden>Most radome repair cost is due to lightning strikes and thunderstorm-related activity.</p>
+          <button type="button" class="retry" hidden>Try again</button>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- Slide 6 -->
+    <section class="lesson" id="lesson-6" aria-labelledby="lesson-6-title">
+      <p class="lesson-step">Section 6 of 7</p>
+      <h2 id="lesson-6-title" tabindex="-1">Radome inspection requirements</h2>
+      <p>
+        A radome is typically made of glass fibre reinforced plastic (GFRP) built around a
+        honeycomb core. Metal lightning diverter strips are fitted along its outside. They give the
+        electric current from a lightning strike a safe path to the fuselage, the main body of the
+        aircraft.
+      </p>
+      <p>
+        Inspection starts with a visual check to judge the radome's condition and whether it is
+        fit for service. During this check, pay particular attention to:
+      </p>
+      <ul>
+        <li>fasteners</li>
+        <li>paintwork</li>
+        <li>the lightning diverter strips</li>
+        <li>any irregularities on the surface</li>
+      </ul>
+      <p>
+        If the damage goes beyond the limits given in the reference documentation, the radome must
+        be repaired or replaced with a serviceable one.
+      </p>
+      <h3>Key takeaways</h3>
+      <ul>
+        <li>Radomes are usually GFRP with a honeycomb core and lightning diverter strips.</li>
+        <li>A visual inspection is always the first step.</li>
+        <li>Damage beyond reference limits means repair or replacement.</li>
+      </ul>
+
+      <div class="quiz">
+        <h3>Quick check</h3>
+        <fieldset class="question" data-correct="b">
+          <legend>What do lightning diverter strips do?</legend>
+          <button type="button" data-option="a">They stop lightning from hitting the aircraft.</button>
+          <button type="button" data-option="b">They carry lightning current safely to the fuselage.</button>
+          <button type="button" data-option="c">They hold the honeycomb core in place.</button>
+          <p class="feedback" aria-live="polite"></p>
+          <p class="explanation" hidden>Diverter strips let current from a lightning strike flow to the fuselage.</p>
+          <button type="button" class="retry" hidden>Try again</button>
+        </fieldset>
+        <fieldset class="question" data-correct="a">
+          <legend>Radome damage is found to be beyond the reference limits. What happens next?</legend>
+          <button type="button" data-option="a">The radome must be repaired or replaced with a serviceable one.</button>
+          <button type="button" data-option="b">It is noted and checked again at the next inspection.</button>
+          <button type="button" data-option="c">The damaged area is repainted.</button>
+          <p class="feedback" aria-live="polite"></p>
+          <p class="explanation" hidden>Any damage beyond reference limits must be repaired, or the radome replaced.</p>
+          <button type="button" class="retry" hidden>Try again</button>
+        </fieldset>
+      </div>
+    </section>
+
+    <section class="lesson" id="lesson-7" aria-labelledby="lesson-7-title">
+      <p class="lesson-step">Section 7 of 7</p>
+      <h2 id="lesson-7-title" tabindex="-1">Wrap-up</h2>
+      <ul>
+        <li>Composite damage often hides below the surface, so a clean surface is not proof of a sound part.</li>
+        <li>Erosion, lightning and impact are the main causes, and small paint marks can hide bigger problems.</li>
+        <li>Moisture that gets in is made worse by freeze-thaw cycles during flight.</li>
+        <li>Radomes face lightning, erosion, bird strikes, delamination and water ingression.</li>
+        <li>Radome inspection starts visually, and damage beyond limits means repair or replacement.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <nav class="lesson-nav" aria-label="Course sections">
+    <button type="button" id="prev-btn">Previous</button>
+    <span id="step-label" aria-live="polite"></span>
+    <button type="button" id="next-btn">Next</button>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,216 @@
+/* Plain styling for now; a proper design comes later. */
+
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #555555;
+  --border: #cccccc;
+  --surface: #f3f3f3;
+  --accent: #1f5fbf;
+  --correct: #1e7a34;
+  --wrong: #b3261e;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #ececec;
+  --muted: #a8a8a8;
+  --border: #444444;
+  --surface: #1f1f1f;
+  --accent: #7fb0ff;
+  --correct: #6fd08c;
+  --wrong: #ff8a80;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--surface);
+  z-index: 10;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.2s ease;
+}
+
+.site-header,
+main,
+.lesson-nav {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header h1 {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+button {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--accent);
+}
+
+button:focus-visible,
+h2:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.lesson {
+  padding: 1rem 0 2rem;
+}
+
+/* With JavaScript on, only the current section is shown. */
+.js .lesson {
+  display: none;
+}
+
+.js .lesson.is-active {
+  display: block;
+}
+
+.lesson-step {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.lesson h2 {
+  margin-top: 0.25rem;
+}
+
+.example {
+  background: var(--surface);
+  border-left: 4px solid var(--accent);
+  padding: 0.25rem 1rem;
+  margin: 1.5rem 0;
+}
+
+.quiz {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.question {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 0 0 1rem;
+}
+
+.question legend {
+  font-weight: 600;
+  padding: 0 0.25rem;
+}
+
+.question button[data-option] {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin: 0.5rem 0;
+}
+
+.question button.is-correct {
+  border-color: var(--correct);
+  border-width: 2px;
+}
+
+.question button.is-wrong {
+  border-color: var(--wrong);
+  border-width: 2px;
+}
+
+.feedback {
+  font-weight: 600;
+  margin: 0.5rem 0 0;
+}
+
+.feedback.correct {
+  color: var(--correct);
+}
+
+.feedback.wrong {
+  color: var(--wrong);
+}
+
+.explanation {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.lesson-nav {
+  display: none;
+}
+
+.js .lesson-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+#step-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .site-header h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar {
+    transition: none;
+  }
+}
